@@ -13,6 +13,11 @@
 		219902DB2811F0F30074E82C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219902C92811F0F10074E82C /* ContentView.swift */; };
 		219902DC2811F0F30074E82C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 219902CA2811F0F30074E82C /* Assets.xcassets */; };
 		219902DD2811F0F30074E82C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 219902CA2811F0F30074E82C /* Assets.xcassets */; };
+		219902E82811F38F0074E82C /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219902E72811F38F0074E82C /* NetworkMonitor.swift */; };
+		219902E92811F38F0074E82C /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219902E72811F38F0074E82C /* NetworkMonitor.swift */; };
+		21F8BF4B2812F65400FF3A77 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F8BF4A2812F65400FF3A77 /* ExternalAccessory.framework */; };
+		21F8BF4D281335F100FF3A77 /* EstadoRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F8BF4C281335F100FF3A77 /* EstadoRed.swift */; };
+		21F8BF4E281335F100FF3A77 /* EstadoRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F8BF4C281335F100FF3A77 /* EstadoRed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		219902CF2811F0F30074E82C /* MonitorRed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonitorRed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		219902D52811F0F30074E82C /* MonitorRed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonitorRed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		219902D72811F0F30074E82C /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		219902E62811F2BC0074E82C /* MonitorRed--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MonitorRed--macOS--Info.plist"; sourceTree = "<group>"; };
+		219902E72811F38F0074E82C /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		21F8BF482812F65400FF3A77 /* MonitorRed (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MonitorRed (iOS).entitlements"; sourceTree = "<group>"; };
+		21F8BF4A2812F65400FF3A77 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/System/Library/Frameworks/ExternalAccessory.framework; sourceTree = DEVELOPER_DIR; };
+		21F8BF4C281335F100FF3A77 /* EstadoRed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstadoRed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21F8BF4B2812F65400FF3A77 /* ExternalAccessory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,9 +56,12 @@
 		219902C22811F0F10074E82C = {
 			isa = PBXGroup;
 			children = (
+				21F8BF482812F65400FF3A77 /* MonitorRed (iOS).entitlements */,
+				219902E62811F2BC0074E82C /* MonitorRed--macOS--Info.plist */,
 				219902C72811F0F10074E82C /* Shared */,
 				219902D62811F0F30074E82C /* macOS */,
 				219902D02811F0F30074E82C /* Products */,
+				21F8BF492812F65400FF3A77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,7 +69,9 @@
 			isa = PBXGroup;
 			children = (
 				219902C82811F0F10074E82C /* MonitorRedApp.swift */,
+				219902E72811F38F0074E82C /* NetworkMonitor.swift */,
 				219902C92811F0F10074E82C /* ContentView.swift */,
+				21F8BF4C281335F100FF3A77 /* EstadoRed.swift */,
 				219902CA2811F0F30074E82C /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -76,6 +92,14 @@
 				219902D72811F0F30074E82C /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		21F8BF492812F65400FF3A77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21F8BF4A2812F65400FF3A77 /* ExternalAccessory.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +201,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				219902DA2811F0F30074E82C /* ContentView.swift in Sources */,
+				219902E82811F38F0074E82C /* NetworkMonitor.swift in Sources */,
+				21F8BF4D281335F100FF3A77 /* EstadoRed.swift in Sources */,
 				219902D82811F0F30074E82C /* MonitorRedApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,6 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				219902DB2811F0F30074E82C /* ContentView.swift in Sources */,
+				219902E92811F38F0074E82C /* NetworkMonitor.swift in Sources */,
+				21F8BF4E281335F100FF3A77 /* EstadoRed.swift in Sources */,
 				219902D92811F0F30074E82C /* MonitorRedApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +335,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MonitorRed (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J3R9SPFEX5;
@@ -337,6 +366,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MonitorRed (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J3R9SPFEX5;
@@ -376,6 +406,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MonitorRed--macOS--Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -404,6 +435,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MonitorRed--macOS--Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
